@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Campanha sobre os perigos do uso de vapes e cigarros eletrônicos">
+  <title>Conscientização sobre o Pod</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .swiper-button-prev, .swiper-button-next {
+      color: white;
+    }
+
+    .help-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1e3a8a;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .help-button:hover {
+      width: 180px;
+    }
+
+    .help-button::before {
+      content: "?";
+      font-size: 24px;
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+
+    .help-button:hover::before {
+      opacity: 0;
+    }
+
+    .help-button::after {
+      content: "Precisa de ajuda?";
+      position: absolute;
+      white-space: nowrap;
+      opacity: 0;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .help-button:hover::after {
+      opacity: 1;
+    }
+
+    .search-button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .search-button:hover {
+      background-color: #2563eb;
+    }
+
+    .side-link {
+      position: relative;
+      display: block;
+      background-color: white;
+      color: #1e3a8a;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+      transition: all 0.3s ease;
+      padding-left: 2rem;
+    }
+
+    .side-link:hover {
+      background-color: #e5e7eb;
+    }
+
+    .side-link::before {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: #1e3a8a;
+      border-radius: 50%;
+    }
+
+    .bg-blue-900 {
+      background-color: #1e3a8a;
+      transition: background-color 0.3s ease;
+    }
+    .bg-blue-900:hover {
+      background-color: #1e40af;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .health-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ef4444;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .health-button:hover {
+      width: 220px;
+      border-radius: 9999px;
+    }
+
+    .health-button::before {
+      content: "+";
+      font-size: 24px;
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+
+    .health-button:hover::before {
+      opacity: 0;
+    }
+
+    .health-button::after {
+      content: "Procure o posto de saúde mais próximo";
+      position: absolute;
+      white-space: nowrap;
+      opacity: 0;
+      transition: all 0.3s ease;
+      font-size: 11px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+
+    .health-button:hover::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <header class="bg-blue-900 text-white shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex space-x-6 items-center">
+        <a href="#" class="text-lg font-semibold hover:underline">Home</a>
+        <a href="#" class="text-lg font-semibold hover:underline">Secretaria de Saúde</a>
+        <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="search-button">Buscar Posto de Saúde</a>
+      </div>
+      <a href="https://instagram.com/seu_perfil_aqui" target="_blank" class="text-white hover:text-gray-200">
+        <i class="ph ph-instagram-logo text-2xl" aria-label="Instagram"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="flex max-w-7xl mx-auto mt-10 px-4 pb-10">
+    <aside class="w-1/4 pr-4">
+      <nav class="space-y-2">
+        <a href="#reportagem1" class="side-link">Perigos do Vape - Blog Sabin</a>
+        <a href="#reportagem2" class="side-link">Alerta da Saúde Pública</a>
+        <a href="#reportagem3" class="side-link">Reportagem Veja São Paulo</a>
+        <a href="#reportagem4" class="side-link">Caso Real - Profissão Repórter</a>
+        <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="side-link">Buscar Posto de Saúde</a>
+      </nav>
+    </aside>
+
+    <main class="w-3/4">
+      <section class="w-full">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe class="w-full h-96 rounded-xl shadow-lg"
+            src="https://www.youtube.com/embed/5WJUrwqtOko"
+            title="Vídeo informativo" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <section class="w-full mt-8">
+        <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
+          <p class="text-base leading-relaxed">
+            O uso de cigarros eletrônicos pode causar sérios danos à saúde, inclusive em jovens. É importante se informar, compartilhar e proteger quem você ama. Essa escolha pode salvar vidas.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="px-4 max-w-3xl mx-auto pb-10">
+    <div class="relative">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center">
+            <img src="https://www.cofen.gov.br/wp-content/uploads/2024/09/colapso-pulmonar-vape.webp"
+                 class="rounded-xl mx-auto shadow-lg" alt="Imagem 1" loading="lazy" />
+            <p class="mt-4 font-semibold text-sm text-white">
+              Cuidado com os perigos de arriscar sua saúde
+            </p>
+          </div>
+          <div class="swiper-slide text-center">
+            <img src="https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2024/09/16112002/Mulher-fica-em-coma-apos-colapso-pulmonar-causado-por-uso-de-vape.jpeg"
+                 class="rounded-xl mx-auto shadow-lg" alt="Imagem 2" loading="lazy" />
+            <p class="mt-4 font-semibold text-sm text-white">
+              Vape pode parecer inofensivo, mas não é
+            </p>
+          </div>
+        </div>
+        <div class="swiper-button-prev !text-white !left-0"></div>
+        <div class="swiper-button-next !text-white !right-0"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center px-4 pb-10">
+    <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank"
+       class="bg-blue-900 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+      Encontrar Posto de Saúde
+    </a>
+  </section>
+
+  <section id="reportagem1" class="max-w-4xl mx-auto px-4 pb-10">
+    <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Perigos do Vape - Blog Sabin</h2>
+      <p class="text-base leading-relaxed">
+        Evidências científicas apontam para malefícios associados ao uso de vapes, principalmente na saúde pulmonar e cardiovascular. Saiba mais.
+        <a href="https://blog.sabin.com.br/saude/quais-os-prejuizos-do-vape-para-a-saude/" target="_blank" class="text-blue-300 underline">Leia a reportagem completa</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="reportagem2" class="max-w-4xl mx-auto px-4 pb-10">
+    <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Alerta da Saúde Pública</h2>
+      <p class="text-base leading-relaxed">
+        Os principais riscos do consumo do cigarro eletrônico são o surgimento de câncer, doenças respiratórias e cardiovasculares, como infarto, morte súbita e AVC.
+        <a href="https://www.saude.df.gov.br/web/guest/w/sa%C3%BAde-p%C3%BAblica-alerta-para-os-perigos-do-cigarro-eletr%C3%B4nico" target="_blank" class="text-blue-300 underline">Leia a reportagem completa</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="reportagem3" class="max-w-4xl mx-auto px-4 pb-10">
+    <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Reportagem Veja São Paulo</h2>
+      <p class="text-base leading-relaxed">
+        A matéria destaca que os cigarros eletrônicos tornaram-se populares devido ao seu apelo visual e aromático. No entanto, estudos recentes comprovam que esses dispositivos causam danos à saúde, incluindo doenças pulmonares e o agravamento de transtornos mentais.
+        <a href="https://vencerocancer.org.br/reportagem-alerta-para-os-perigos-do-vape/" target="_blank" class="text-blue-300 underline">Leia a reportagem completa</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="reportagem4" class="max-w-4xl mx-auto px-4 pb-20">
+    <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Caso Real - Profissão Repórter</h2>
+      <p class="text-base leading-relaxed">
+        O Profissão Repórter mostra os riscos do uso do cigarro eletrônico. Arnaldo Machado teve 80% do pulmão comprometido e teve que ser intubado após 9 meses de uso.
+        <a href="https://globoplay.globo.com/v/12207694/" target="_blank" class="text-blue-300 underline">Assista à reportagem completa</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="help-button">
+    <i class="ph ph-question"></i>
+  </div>
+
+  <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="health-button"></a>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    document.querySelector('.help-button').addEventListener('click', function() {
+      alert('Entre em contato com a Secretaria de Saúde para mais informações!\nLigue 136 (Disque Saúde)');
+    });
+  </script>
+</body>
+</html>
