@@ -166,32 +166,31 @@
     }
   </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-gray-800 font-sans">
 
-  <header class="bg-blue-900 text-white shadow">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <div class="flex space-x-6 items-center">
-        <a href="#" class="text-lg font-semibold hover:underline">Home</a>
-        <a href="#" class="text-lg font-semibold hover:underline">Secretaria de Saúde</a>
-        <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="search-button">Buscar Posto de Saúde</a>
-      </div>
-      <a href="https://instagram.com/seu_perfil_aqui" target="_blank" class="text-white hover:text-gray-200">
-        <i class="ph ph-instagram-logo text-2xl" aria-label="Instagram"></i>
-      </a>
+  <header class="bg-blue-600 text-white shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    <div class="flex space-x-6 items-center">
+      <a href="#" class="text-lg font-semibold hover:underline">Home</a>
+      <a href="https://saude.sp.gov.br/" target="_blank" class="text-lg font-semibold hover:underline">Secretaria de Saúde</a>
+      <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="search-button bg-red-600 hover:bg-red-700">Buscar Posto de Saúde</a>
     </div>
-  </header>
+    </a>
+  </div>
+</header>
 
   <div class="flex max-w-7xl mx-auto mt-10 px-4 pb-10">
-    <aside class="w-1/4 pr-4">
-      <nav class="space-y-2">
+    <aside class="w-1/4 pr-4 sticky top-20 self-start">
+      <nav class="space-y-2 bg-blue-900 p-4 rounded-xl shadow-lg">
+        <h3 class="text-white font-bold mb-3 text-lg">Reportagens</h3>
         <a href="#reportagem1" class="side-link">Perigos do Vape - Blog Sabin</a>
         <a href="#reportagem2" class="side-link">Alerta da Saúde Pública</a>
+        <a href="#segundo-video" class="side-link bg-red-700 text-white">Ver Vídeo Explicativo</a>
         <a href="#reportagem3" class="side-link">Reportagem Veja São Paulo</a>
         <a href="#reportagem4" class="side-link">Caso Real - Profissão Repórter</a>
         <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="side-link">Buscar Posto de Saúde</a>
       </nav>
-    </aside>
-
+    </aside>  
     <main class="w-3/4">
       <section class="w-full">
         <div class="aspect-w-16 aspect-h-9">
@@ -211,30 +210,35 @@
     </main>
   </div>
 
-  <section class="px-4 max-w-3xl mx-auto pb-10">
-    <div class="relative">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide text-center">
+<section class="px-4 max-w-3xl mx-auto pb-10">
+  <div class="relative">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide text-center">
+          <a href="https://www.cofen.gov.br/colapso-pulmonar-e-relacionado-ao-uso-de-vape_117243.html" target="_blank">
             <img src="https://www.cofen.gov.br/wp-content/uploads/2024/09/colapso-pulmonar-vape.webp"
                  class="rounded-xl mx-auto shadow-lg" alt="Imagem 1" loading="lazy" />
-            <p class="mt-4 font-semibold text-sm text-white">
-              Cuidado com os perigos de arriscar sua saúde
-            </p>
-          </div>
-          <div class="swiper-slide text-center">
+          </a>
+          <p class="mt-4 font-semibold text-sm text-white">
+            Cuidado com os perigos de arriscar sua saúde
+          </p>
+        </div>
+        <div class="swiper-slide text-center">
+          <a href="https://www.metropoles.com/saude/mulher-fica-em-coma-apos-uso-de-vape" target="_blank">
             <img src="https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2024/09/16112002/Mulher-fica-em-coma-apos-colapso-pulmonar-causado-por-uso-de-vape.jpeg"
                  class="rounded-xl mx-auto shadow-lg" alt="Imagem 2" loading="lazy" />
-            <p class="mt-4 font-semibold text-sm text-white">
-              Vape pode parecer inofensivo, mas não é
-            </p>
-          </div>
+          </a>
+          <p class="mt-4 font-semibold text-sm text-white">
+            Vape pode parecer inofensivo, mas não é
+          </p>
         </div>
-        <div class="swiper-button-prev !text-white !left-0"></div>
-        <div class="swiper-button-next !text-white !right-0"></div>
+        
       </div>
+      <div class="swiper-button-prev !text-white !left-0"></div>
+      <div class="swiper-button-next !text-white !right-0"></div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="text-center px-4 pb-10">
     <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank"
@@ -263,6 +267,18 @@
     </div>
   </section>
 
+  <section id="segundo-video" class="max-w-4xl mx-auto px-4 pb-10">
+  <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
+    <h2 class="text-xl font-bold mb-4">Entenda mais sobre o que você tem inalado:</h2>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe class="w-full h-96 rounded-xl shadow-lg"
+        src="https://www.youtube.com/embed/a_88Ke0Vrx4"
+        title="Entenda mais sobre o que você tem inalado"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
   <section id="reportagem3" class="max-w-4xl mx-auto px-4 pb-10">
     <div class="bg-blue-900 text-white p-6 rounded-xl shadow-lg">
       <h2 class="text-xl font-bold mb-4">Reportagem Veja São Paulo</h2>
@@ -282,11 +298,6 @@
       </p>
     </div>
   </section>
-
-  <div class="help-button">
-    <i class="ph ph-question"></i>
-  </div>
-
   <a href="http://buscasaude.prefeitura.sp.gov.br/" target="_blank" class="health-button"></a>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
